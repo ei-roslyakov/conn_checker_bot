@@ -7,11 +7,11 @@ logger = loguru.logger
 
 def get_status_web(url):
 
-    ok_codes = ["200", "301", "302"]
+    
 
     try:
-        print("start")
-        get_url = requests.head(f"https://{url}", timeout=10)
+        ok_codes = [200, 301, 302]
+        get_url = requests.head(f"https://{url}", timeout=5)
         if get_url.status_code in ok_codes:
             return 0
     except requests.exceptions.Timeout as e:

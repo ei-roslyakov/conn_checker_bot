@@ -41,7 +41,6 @@ class BotHandler(object):
     @bot.message_handler(content_types=["text"])
     def ping(message):
 
-        print(message.text)
         status = get_status_ping(message.text)
 
         if status == 0:
@@ -57,6 +56,7 @@ class BotHandler(object):
     @bot.message_handler(content_types=["text"])
     def web(message):
 
+        print(message.text)
         status = get_status_web(message.text)
         print(status)
 
