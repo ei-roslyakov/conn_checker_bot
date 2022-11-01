@@ -25,7 +25,7 @@ class BotHandler(object):
     @bot.message_handler(commands=["ping"])
     def host(message):
         msg = bot.send_message(
-            message.chat.id, "Please provide the host DNS name (f.e roslyakov.net)"
+            message.chat.id, "Please provide the host DNS name or IP (f.e roslyakov.net or 213.110.148.240)"
         )
         bot.register_next_step_handler(msg, BotHandler.ping)
 
@@ -33,7 +33,7 @@ class BotHandler(object):
     @bot.message_handler(commands=["web"])
     def host(message):
         msg = bot.send_message(
-            message.chat.id, "Please provide the host DNS name (f.e roslyakov.net)"
+            message.chat.id, "Please provide the host DNS name or IP(f.e roslyakov.net or 213.110.148.240)"
         )
         bot.register_next_step_handler(msg, BotHandler.web)
 
