@@ -7,8 +7,6 @@ logger = loguru.logger
 
 def get_status_web(url):
 
-    
-
     try:
         ok_codes = [200, 301, 302]
         get_url = requests.head(f"https://{url}", timeout=5)
