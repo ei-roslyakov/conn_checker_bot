@@ -29,10 +29,9 @@ python3 -m bot
 ```
 or you can use Docker
 ```
-docker build -t bot
+docker build -t bot .
 docker run --name=bot -e SECRET_TOKEN='Telegram API Token' -it bot 
 ```
 
 ## Future plans
 1. Make it possible to set a schedule to check the host
-2. Make it possible to check IP
